@@ -1,0 +1,39 @@
+---
+description: GitHub Pages static site — src layout, build output, no backend
+alwaysApply: true
+---
+
+# GitHub Pages static site
+
+This repository is a **static site** published to **GitHub Pages** (GitHub Actions workflow and/or `gh-pages` branch). Treat it as client-only HTML/CSS/JS.
+
+## Layout and build
+
+- **Source** lives under `src/` (pages, components, styles, assets as the toolchain expects).
+- **Built site** is emitted to `dist/` by default; use `build/` only if the project is explicitly configured that way.
+- **Entry document** is `src/index.html`. After `npm run build` (or the repo’s package-manager equivalent), the deployed root is `dist/index.html` (or `build/index.html` if configured).
+- Assume a **Vite** or **esbuild**-style pipeline: one build command produces the folder GitHub Pages serves. Do not treat `public/` at repo root as the canonical app unless the project already standardizes on that pattern.
+
+## Stack and markup
+
+- Prefer **Tailwind-style utility classes**, **`dark:`** (or project-equivalent) variants for dark mode, and **semantic HTML** (`main`, `nav`, `header`, `article`, `section`, proper heading order, labels on controls).
+- Keep styling and structure consistent with existing patterns in `src/`.
+
+## Hard constraints
+
+- **No server-side code**, server frameworks, or API routes in this repo. No reliance on Node at runtime in the browser bundle beyond what a static build emits.
+- Client-side `fetch` to **public** third-party or static JSON endpoints is fine; do not introduce a backend owned by this project unless the user explicitly changes that assumption.
+
+## Examples
+
+```html
+<!-- Prefer semantic regions + utilities -->
+<main class="min-h-dvh bg-background text-foreground dark:bg-zinc-950">
+  <h1 class="text-2xl font-semibold">…</h1>
+</main>
+```
+
+```text
+❌ Adding Express/FastAPI routes or server-only middleware in this repo
+✅ `src/index.html` + build tooling → `dist/` for Pages
+```
