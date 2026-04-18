@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nl">
   <head>
     <meta charset="utf-8" />
@@ -8,34 +8,89 @@
       name="description"
       content="Vind een ervaren thuisbatterij specialist in jouw regio: advies, installatie en lokale bedrijven. Start via Thuisbatterij Specialist Bij Mij — gratis oriëntatie."
     />
-    <link rel="stylesheet" href="css/styles.css" />
+    <script type="module" src="/js/site.js"></script>
   </head>
-  <body>
-    <a class="skip-link" href="#main">Naar inhoud</a>
-    <header class="site-header">
-      <div class="site-header__inner">
-        <a class="brand" href="index.html">Diensten bij mij</a>
-        <nav class="nav-primary" aria-label="Hoofdnavigatie">
-          <a href="index.html">Home</a>
-          <a href="loodgieters-bij-mij.html">Loodgieter</a>
-          <a href="rijschool-bij-mij.html">Rijschool</a>
-          <a href="thuisbatterij-bij-mij.html" aria-current="page">Thuisbatterij</a>
-          <a href="vakman-bij-mij.html">Vakman</a>
-          <a href="dakdekker-bij-mij.html">Dakdekker</a>
-          <a href="slotenmaker-bij-mij.html">Slotenmaker</a>
+  <body
+    class="min-h-dvh bg-canvas text-ink antialiased dark:bg-canvas-dark dark:text-ink-dark"
+  >
+    <a
+      class="absolute -left-[9999px] z-[999] bg-link px-4 py-2 text-white no-underline focus:fixed focus:left-2 focus:top-2 focus:z-[1000] focus:outline-hidden focus:ring-2 focus:ring-white/50 dark:bg-link-dark dark:text-canvas-dark dark:focus:ring-canvas-dark/40"
+      href="#main"
+      >Naar inhoud</a
+    >
+    <header
+      class="border-b border-line bg-panel dark:border-line-dark dark:bg-panel-dark"
+    >
+      <div
+        class="mx-auto flex max-w-4xl flex-wrap items-center justify-between gap-4 px-5 py-4"
+      >
+        <a
+          class="text-lg font-bold text-ink no-underline hover:text-link dark:text-ink-dark dark:hover:text-link-dark"
+          href="index.html"
+          >Diensten bij mij</a
+        >
+        <nav
+          class="flex flex-wrap gap-x-5 gap-y-3 text-base"
+          aria-label="Hoofdnavigatie"
+        >
+          <a
+            class="font-medium text-link no-underline underline-offset-2 hover:text-link-hover [aria-current=page]:underline dark:text-link-dark dark:hover:text-link-hover-dark"
+            href="index.html"
+            >Home</a
+          >
+          <a
+            class="font-medium text-link no-underline underline-offset-2 hover:text-link-hover [aria-current=page]:underline dark:text-link-dark dark:hover:text-link-hover-dark"
+            href="loodgieters-bij-mij.html"
+            >Loodgieter</a
+          >
+          <a
+            class="font-medium text-link no-underline underline-offset-2 hover:text-link-hover [aria-current=page]:underline dark:text-link-dark dark:hover:text-link-hover-dark"
+            href="rijschool-bij-mij.html"
+            >Rijschool</a
+          >
+          <a
+            class="font-medium text-link no-underline underline-offset-2 hover:text-link-hover [aria-current=page]:underline dark:text-link-dark dark:hover:text-link-hover-dark"
+            href="thuisbatterij-bij-mij.html"
+            aria-current="page"
+            >Thuisbatterij</a
+          >
+          <a
+            class="font-medium text-link no-underline underline-offset-2 hover:text-link-hover [aria-current=page]:underline dark:text-link-dark dark:hover:text-link-hover-dark"
+            href="vakman-bij-mij.html"
+            >Vakman</a
+          >
+          <a
+            class="font-medium text-link no-underline underline-offset-2 hover:text-link-hover [aria-current=page]:underline dark:text-link-dark dark:hover:text-link-hover-dark"
+            href="dakdekker-bij-mij.html"
+            >Dakdekker</a
+          >
+          <a
+            class="font-medium text-link no-underline underline-offset-2 hover:text-link-hover [aria-current=page]:underline dark:text-link-dark dark:hover:text-link-hover-dark"
+            href="slotenmaker-bij-mij.html"
+            >Slotenmaker</a
+          >
         </nav>
       </div>
     </header>
-    <main id="main">
-      <div class="hero">
-        <h1>Thuisbatterij specialist bij jou in de buurt</h1>
-        <p class="lead">
+    <main id="main" class="mx-auto max-w-4xl px-5 pb-12 pt-8">
+      <div class="mb-8">
+        <h1
+          class="mb-3 text-pretty text-3xl font-bold leading-tight text-ink md:text-4xl dark:text-ink-dark"
+        >
+          Thuisbatterij specialist bij jou in de buurt
+        </h1>
+        <p
+          class="m-0 max-w-xl text-lg leading-relaxed text-subtle dark:text-subtle-dark"
+        >
           Een <strong>thuisbatterij</strong> kies je niet alleen op merk: veiligheid, installatie en
           service op afstand tellen mee. Met een regionaal overzicht vind je sneller een partij die
           bij jouw woning en energieprofiel past.
         </p>
       </div>
-      <section class="prose" aria-labelledby="platform-heading">
+      <section
+        class="prose prose-slate mt-10 max-w-none dark:prose-invert prose-headings:font-semibold prose-h2:text-xl prose-h2:font-semibold prose-p:mb-4 prose-p:last:mb-0 prose-p:leading-relaxed prose-p:text-subtle prose-ul:my-0 prose-li:my-1 prose-li:marker:text-subtle dark:prose-p:text-subtle-dark dark:prose-li:marker:text-subtle-dark prose-a:font-medium prose-a:text-link prose-a:no-underline prose-a:underline-offset-2 hover:prose-a:text-link-hover hover:prose-a:underline focus:prose-a:outline-hidden focus:prose-a:ring-2 focus:prose-a:ring-link/35 dark:prose-a:text-link-dark dark:hover:prose-a:text-link-hover-dark dark:focus:prose-a:ring-link-dark/35"
+        aria-labelledby="platform-heading"
+      >
         <h2 id="platform-heading">Lokale specialisten vergelijken</h2>
         <p>
           Begin op
@@ -49,7 +104,10 @@
           als startpunt voor je zoektocht.
         </p>
       </section>
-      <section class="prose" aria-labelledby="advies-heading">
+      <section
+        class="prose prose-slate mt-10 max-w-none dark:prose-invert prose-headings:font-semibold prose-h2:text-xl prose-h2:font-semibold prose-p:mb-4 prose-p:last:mb-0 prose-p:leading-relaxed prose-p:text-subtle prose-ul:my-0 prose-li:my-1 prose-li:marker:text-subtle dark:prose-p:text-subtle-dark dark:prose-li:marker:text-subtle-dark prose-a:font-medium prose-a:text-link prose-a:no-underline prose-a:underline-offset-2 hover:prose-a:text-link-hover hover:prose-a:underline focus:prose-a:outline-hidden focus:prose-a:ring-2 focus:prose-a:ring-link/35 dark:prose-a:text-link-dark dark:hover:prose-a:text-link-hover-dark dark:focus:prose-a:ring-link-dark/35"
+        aria-labelledby="advies-heading"
+      >
         <h2 id="advies-heading">Advies, capaciteit en plaatsing</h2>
         <ul>
           <li>
@@ -70,7 +128,10 @@
           </li>
         </ul>
       </section>
-      <section class="prose" aria-labelledby="waarom-heading">
+      <section
+        class="prose prose-slate mt-10 max-w-none dark:prose-invert prose-headings:font-semibold prose-h2:text-xl prose-h2:font-semibold prose-p:mb-4 prose-p:last:mb-0 prose-p:leading-relaxed prose-p:text-subtle prose-ul:my-0 prose-li:my-1 prose-li:marker:text-subtle dark:prose-p:text-subtle-dark dark:prose-li:marker:text-subtle-dark prose-a:font-medium prose-a:text-link prose-a:no-underline prose-a:underline-offset-2 hover:prose-a:text-link-hover hover:prose-a:underline focus:prose-a:outline-hidden focus:prose-a:ring-2 focus:prose-a:ring-link/35 dark:prose-a:text-link-dark dark:hover:prose-a:text-link-hover-dark dark:focus:prose-a:ring-link-dark/35"
+        aria-labelledby="waarom-heading"
+      >
         <h2 id="waarom-heading">Waarom via dit portaal starten?</h2>
         <p>
           Je houdt zelf contact met bedrijven en bepaalt welke vervolgstappen je zet. Open
@@ -83,21 +144,43 @@
           verder uitdiepen op het doelplatform — inclusief blog en calculators waar beschikbaar.
         </p>
       </section>
-      <div class="cta-block">
-        <p><strong>Start je zoektocht</strong></p>
-        <p>
+      <div
+        class="mt-8 rounded-card border border-line bg-panel p-5 shadow-card dark:border-line-dark dark:bg-panel-dark dark:shadow-card-dark"
+      >
+        <p class="mb-3 text-ink last:mb-0 dark:text-ink-dark"><strong>Start je zoektocht</strong></p>
+        <p class="mb-3 text-[0.9375rem] leading-relaxed text-subtle last:mb-0 dark:text-subtle-dark">
           Ga naar
-          <a href="https://www.thuisbatterijbijmij.nl/">Thuisbatterij Specialist Bij Mij — zoeken</a>
+          <a
+            class="font-semibold text-link no-underline underline-offset-2 hover:text-link-hover hover:underline focus:outline-hidden focus:ring-2 focus:ring-link/40 dark:text-link-dark dark:hover:text-link-hover-dark dark:focus:ring-link-dark/40"
+            href="https://www.thuisbatterijbijmij.nl/"
+            >Thuisbatterij Specialist Bij Mij — zoeken</a
+          >
           of kies direct
-          <a href="https://www.thuisbatterijbijmij.nl/">betrouwbare thuisbatterij monteur</a> als je
-          klaar bent om concreet contact te leggen.
+          <a
+            class="font-semibold text-link no-underline underline-offset-2 hover:text-link-hover hover:underline focus:outline-hidden focus:ring-2 focus:ring-link/40 dark:text-link-dark dark:hover:text-link-hover-dark dark:focus:ring-link-dark/40"
+            href="https://www.thuisbatterijbijmij.nl/"
+            >betrouwbare thuisbatterij monteur</a
+          >
+          als je klaar bent om concreet contact te leggen.
         </p>
       </div>
     </main>
-    <footer class="site-footer">
-      <div class="site-footer__inner">
-        <p><a href="index.html">← Terug naar Diensten bij mij</a></p>
-        <p>© 2026 Diensten bij mij. Externe dienst: Thuisbatterij Specialist Bij Mij.</p>
+    <footer
+      class="mt-12 border-t border-line bg-panel dark:border-line-dark dark:bg-panel-dark"
+    >
+      <div
+        class="mx-auto max-w-4xl px-5 py-6 text-sm leading-relaxed text-subtle dark:text-subtle-dark"
+      >
+        <p class="mb-2 last:mb-0">
+          <a
+            class="font-medium text-link no-underline underline-offset-2 hover:text-link-hover focus:outline-hidden focus:ring-2 focus:ring-link/40 dark:text-link-dark dark:hover:text-link-hover-dark dark:focus:ring-link-dark/40"
+            href="index.html"
+            >← Terug naar Diensten bij mij</a
+          >
+        </p>
+        <p class="mb-2 last:mb-0">
+          © 2026 Diensten bij mij. Externe dienst: Thuisbatterij Specialist Bij Mij.
+        </p>
       </div>
     </footer>
   </body>

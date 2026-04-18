@@ -1,39 +1,38 @@
 ---
-description: GitHub Pages static site — src layout, build output, no backend
+description: GitHub Pages static site — docs source, Vite build to dist, no backend
 alwaysApply: true
 ---
 
 # GitHub Pages static site
 
-This repository is a **static site** published to **GitHub Pages** (GitHub Actions workflow and/or `gh-pages` branch). Treat it as client-only HTML/CSS/JS.
+This repository is a **static site** published to **GitHub Pages** via **GitHub Actions** (`.github/workflows/pages.yml`). Treat it as client-only HTML/CSS/JS.
 
 ## Layout and build
 
-- **Source** lives under `src/` (pages, components, styles, assets as the toolchain expects).
-- **Built site** is emitted to `dist/` by default; use `build/` only if the project is explicitly configured that way.
-- **Entry document** is `src/index.html`. After `npm run build` (or the repo’s package-manager equivalent), the deployed root is `dist/index.html` (or `build/index.html` if configured).
-- Assume a **Vite** or **esbuild**-style pipeline: one build command produces the folder GitHub Pages serves. Do not treat `public/` at repo root as the canonical app unless the project already standardizes on that pattern.
+- **Source** lives under [`docs/`](docs/): multi-page HTML, [`docs/css/main.css`](docs/css/main.css) (Tailwind entry), [`docs/js/site.js`](docs/js/site.js) (imports CSS for Vite).
+- **Vite** [`vite.config.mjs`](vite.config.mjs): `root` is `docs/`; **`pnpm run build`** writes the deployable site to repo-root **`dist/`**.
+- **GitHub Pages base path** is **`/diensten-bij-mij/`** (project site). It must stay in sync with Vite `base` in [`vite.config.mjs`](vite.config.mjs).
+- **Local dev**: `pnpm dev` — open the app under the configured `base` (e.g. `/diensten-bij-mij/`). **`pnpm preview`** serves **`dist/`** after a build.
 
 ## Stack and markup
 
-- Prefer **Tailwind-style utility classes**, **`dark:`** (or project-equivalent) variants for dark mode, and **semantic HTML** (`main`, `nav`, `header`, `article`, `section`, proper heading order, labels on controls).
-- Keep styling and structure consistent with existing patterns in `src/`.
+- **Tailwind CSS v4** (utilities + `@theme` tokens in `main.css`), **`@tailwindcss/typography`** for prose blocks, **`dark:`** tied to **`prefers-color-scheme`** via `@custom-variant` in CSS.
+- Follow [`tailwind.mdc`](tailwind.mdc) for tokens, ordering, and accessibility.
+- Prefer **semantic HTML** (`main`, `nav`, `header`, `article`, `section`, proper heading order, labels on controls).
 
 ## Hard constraints
 
-- **No server-side code**, server frameworks, or API routes in this repo. No reliance on Node at runtime in the browser bundle beyond what a static build emits.
+- **No server-side code**, server frameworks, or API routes in this repo. No reliance on Node at runtime in the browser beyond what the static build emits.
 - Client-side `fetch` to **public** third-party or static JSON endpoints is fine; do not introduce a backend owned by this project unless the user explicitly changes that assumption.
 
 ## Examples
 
 ```html
-<!-- Prefer semantic regions + utilities -->
-<main class="min-h-dvh bg-background text-foreground dark:bg-zinc-950">
-  <h1 class="text-2xl font-semibold">…</h1>
-</main>
+<!-- Vite injects hashed CSS/JS from the module script -->
+<script type="module" src="/js/site.js"></script>
 ```
 
 ```text
-❌ Adding Express/FastAPI routes or server-only middleware in this repo
-✅ `src/index.html` + build tooling → `dist/` for Pages
+❌ Serving only raw `docs/` on Pages without running `pnpm build` (Tailwind would not compile)
+✅ Action uploads `dist/` after `pnpm build` — Pages source = GitHub Actions
 ```

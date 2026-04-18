@@ -1,0 +1,35 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@layer base {
+  :root {
+    color-scheme: light dark;
+  }
+}
+
+/* System dark mode (matches previous prefers-color-scheme behavior). */
+@custom-variant dark (@media (prefers-color-scheme: dark));
+
+@theme {
+  --color-canvas: #f8fafc;
+  --color-canvas-dark: #0f172a;
+  --color-ink: #0f172a;
+  --color-ink-dark: #f1f5f9;
+  --color-subtle: #475569;
+  --color-subtle-dark: #94a3b8;
+  --color-panel: #ffffff;
+  --color-panel-dark: #1e293b;
+  --color-line: #e2e8f0;
+  --color-line-dark: #334155;
+  --color-link: #0369a1;
+  --color-link-hover: #075985;
+  --color-link-dark: #38bdf8;
+  --color-link-hover-dark: #7dd3fc;
+
+  --radius-card: 12px;
+
+  --shadow-card:
+    0 1px 2px rgb(15 23 42 / 0.06), 0 4px 12px rgb(15 23 42 / 0.06);
+  --shadow-card-dark:
+    0 1px 2px rgb(0 0 0 / 0.2), 0 4px 12px rgb(0 0 0 / 0.25);
+}

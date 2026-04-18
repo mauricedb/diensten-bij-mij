@@ -10,7 +10,6 @@
       name="description"
       content="Diensten bij mij bundelt handige portals: loodgieter, rijschool, thuisbatterij, vakman, dakdekker en slotenmaker bij jou in de buurt. Start hier je zoektocht."
     />
-    <link rel="stylesheet" href="css/styles.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -30,106 +29,216 @@
         ]
       }
     </script>
+    <script type="module" src="/js/site.js"></script>
   </head>
-  <body>
-    <a class="skip-link" href="#main">Naar inhoud</a>
-    <header class="site-header">
-      <div class="site-header__inner">
-        <a class="brand" href="index.html">Diensten bij mij</a>
-        <nav class="nav-primary" aria-label="Hoofdnavigatie">
-          <a href="index.html" aria-current="page">Home</a>
-          <a href="loodgieters-bij-mij.html">Loodgieter</a>
-          <a href="rijschool-bij-mij.html">Rijschool</a>
-          <a href="thuisbatterij-bij-mij.html">Thuisbatterij</a>
-          <a href="vakman-bij-mij.html">Vakman</a>
-          <a href="dakdekker-bij-mij.html">Dakdekker</a>
-          <a href="slotenmaker-bij-mij.html">Slotenmaker</a>
+  <body
+    class="min-h-dvh bg-canvas text-ink antialiased dark:bg-canvas-dark dark:text-ink-dark"
+  >
+    <a
+      class="absolute -left-[9999px] z-[999] bg-link px-4 py-2 text-white no-underline focus:fixed focus:left-2 focus:top-2 focus:z-[1000] focus:outline-hidden focus:ring-2 focus:ring-white/50 dark:bg-link-dark dark:text-canvas-dark dark:focus:ring-canvas-dark/40"
+      href="#main"
+      >Naar inhoud</a
+    >
+    <header
+      class="border-b border-line bg-panel dark:border-line-dark dark:bg-panel-dark"
+    >
+      <div
+        class="mx-auto flex max-w-4xl flex-wrap items-center justify-between gap-4 px-5 py-4"
+      >
+        <a
+          class="text-lg font-bold text-ink no-underline hover:text-link dark:text-ink-dark dark:hover:text-link-dark"
+          href="index.html"
+          >Diensten bij mij</a
+        >
+        <nav
+          class="flex flex-wrap gap-x-5 gap-y-3 text-base"
+          aria-label="Hoofdnavigatie"
+        >
+          <a
+            class="font-medium text-link no-underline underline-offset-2 hover:text-link-hover [aria-current=page]:underline dark:text-link-dark dark:hover:text-link-hover-dark"
+            href="index.html"
+            aria-current="page"
+            >Home</a
+          >
+          <a
+            class="font-medium text-link no-underline underline-offset-2 hover:text-link-hover [aria-current=page]:underline dark:text-link-dark dark:hover:text-link-hover-dark"
+            href="loodgieters-bij-mij.html"
+            >Loodgieter</a
+          >
+          <a
+            class="font-medium text-link no-underline underline-offset-2 hover:text-link-hover [aria-current=page]:underline dark:text-link-dark dark:hover:text-link-hover-dark"
+            href="rijschool-bij-mij.html"
+            >Rijschool</a
+          >
+          <a
+            class="font-medium text-link no-underline underline-offset-2 hover:text-link-hover [aria-current=page]:underline dark:text-link-dark dark:hover:text-link-hover-dark"
+            href="thuisbatterij-bij-mij.html"
+            >Thuisbatterij</a
+          >
+          <a
+            class="font-medium text-link no-underline underline-offset-2 hover:text-link-hover [aria-current=page]:underline dark:text-link-dark dark:hover:text-link-hover-dark"
+            href="vakman-bij-mij.html"
+            >Vakman</a
+          >
+          <a
+            class="font-medium text-link no-underline underline-offset-2 hover:text-link-hover [aria-current=page]:underline dark:text-link-dark dark:hover:text-link-hover-dark"
+            href="dakdekker-bij-mij.html"
+            >Dakdekker</a
+          >
+          <a
+            class="font-medium text-link no-underline underline-offset-2 hover:text-link-hover [aria-current=page]:underline dark:text-link-dark dark:hover:text-link-hover-dark"
+            href="slotenmaker-bij-mij.html"
+            >Slotenmaker</a
+          >
         </nav>
       </div>
     </header>
-    <main id="main">
-      <div class="hero">
-        <h1>Vind de juiste dienst bij jou in de buurt</h1>
-        <p class="lead">
+    <main id="main" class="mx-auto max-w-4xl px-5 pb-12 pt-8">
+      <div class="mb-8">
+        <h1
+          class="mb-3 text-pretty text-3xl font-bold leading-tight text-ink md:text-4xl dark:text-ink-dark"
+        >
+          Vind de juiste dienst bij jou in de buurt
+        </h1>
+        <p
+          class="m-0 max-w-xl text-lg leading-relaxed text-subtle dark:text-subtle-dark"
+        >
           <strong>Diensten bij mij</strong> is je startpunt: per vakgebied
           linken we door naar een gespecialiseerde site met lokale resultaten,
           reviews en praktische informatie — zodat je sneller een betrouwbare
           keuze maakt.
         </p>
       </div>
-      <section aria-labelledby="diensten-heading">
-        <h2 id="diensten-heading">Kies je dienst</h2>
-        <div class="card-grid">
-          <article class="card">
-            <h2>Loodgieter &amp; riool</h2>
-            <p>
+      <section class="mt-10" aria-labelledby="diensten-heading">
+        <h2
+          id="diensten-heading"
+          class="mb-4 text-xl font-semibold text-ink dark:text-ink-dark"
+        >
+          Kies je dienst
+        </h2>
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <article
+            class="rounded-card border border-line bg-panel p-5 shadow-card dark:border-line-dark dark:bg-panel-dark dark:shadow-card-dark"
+          >
+            <h2 class="mb-2 text-lg font-semibold text-ink dark:text-ink-dark">
+              Loodgieter &amp; riool
+            </h2>
+            <p
+              class="mb-4 text-[0.9375rem] leading-relaxed text-subtle dark:text-subtle-dark"
+            >
               Spoed, lekkage, riool of sanitair: ontdek loodgieters in jouw
               regio met duidelijke basisinformatie.
             </p>
-            <a class="card__link" href="loodgieters-bij-mij.html"
+            <a
+              class="font-semibold text-link no-underline underline-offset-2 hover:text-link-hover hover:underline focus:outline-hidden focus:ring-2 focus:ring-link/40 dark:text-link-dark dark:hover:text-link-hover-dark dark:focus:ring-link-dark/40"
+              href="loodgieters-bij-mij.html"
               >Naar loodgieters bij mij</a
             >
           </article>
-          <article class="card">
-            <h2>Rijschool</h2>
-            <p>
+          <article
+            class="rounded-card border border-line bg-panel p-5 shadow-card dark:border-line-dark dark:bg-panel-dark dark:shadow-card-dark"
+          >
+            <h2 class="mb-2 text-lg font-semibold text-ink dark:text-ink-dark">
+              Rijschool
+            </h2>
+            <p
+              class="mb-4 text-[0.9375rem] leading-relaxed text-subtle dark:text-subtle-dark"
+            >
               Auto, motor, theorie of automaat: vergelijk rijscholen op reviews,
               lessen en contact — dicht bij huis.
             </p>
-            <a class="card__link" href="rijschool-bij-mij.html"
+            <a
+              class="font-semibold text-link no-underline underline-offset-2 hover:text-link-hover hover:underline focus:outline-hidden focus:ring-2 focus:ring-link/40 dark:text-link-dark dark:hover:text-link-hover-dark dark:focus:ring-link-dark/40"
+              href="rijschool-bij-mij.html"
               >Naar rijschool bij mij</a
             >
           </article>
-          <article class="card">
-            <h2>Thuisbatterij</h2>
-            <p>
+          <article
+            class="rounded-card border border-line bg-panel p-5 shadow-card dark:border-line-dark dark:bg-panel-dark dark:shadow-card-dark"
+          >
+            <h2 class="mb-2 text-lg font-semibold text-ink dark:text-ink-dark">
+              Thuisbatterij
+            </h2>
+            <p
+              class="mb-4 text-[0.9375rem] leading-relaxed text-subtle dark:text-subtle-dark"
+            >
               Advies, capaciteit en installatie: vind een ervaren thuisbatterij
               specialist bij jou in de buurt.
             </p>
-            <a class="card__link" href="thuisbatterij-bij-mij.html"
+            <a
+              class="font-semibold text-link no-underline underline-offset-2 hover:text-link-hover hover:underline focus:outline-hidden focus:ring-2 focus:ring-link/40 dark:text-link-dark dark:hover:text-link-hover-dark dark:focus:ring-link-dark/40"
+              href="thuisbatterij-bij-mij.html"
               >Naar thuisbatterij specialist bij mij</a
             >
           </article>
-          <article class="card">
-            <h2>Vakman &amp; offertes</h2>
-            <p>
+          <article
+            class="rounded-card border border-line bg-panel p-5 shadow-card dark:border-line-dark dark:bg-panel-dark dark:shadow-card-dark"
+          >
+            <h2 class="mb-2 text-lg font-semibold text-ink dark:text-ink-dark">
+              Vakman &amp; offertes
+            </h2>
+            <p
+              class="mb-4 text-[0.9375rem] leading-relaxed text-subtle dark:text-subtle-dark"
+            >
               Van schilder tot elektricien: vraag gratis offertes aan en
               vergelijk gecertificeerde vakbedrijven.
             </p>
-            <a class="card__link" href="vakman-bij-mij.html"
+            <a
+              class="font-semibold text-link no-underline underline-offset-2 hover:text-link-hover hover:underline focus:outline-hidden focus:ring-2 focus:ring-link/40 dark:text-link-dark dark:hover:text-link-hover-dark dark:focus:ring-link-dark/40"
+              href="vakman-bij-mij.html"
               >Naar vakman bij mij</a
             >
           </article>
-          <article class="card">
-            <h2>Dakdekker</h2>
-            <p>
+          <article
+            class="rounded-card border border-line bg-panel p-5 shadow-card dark:border-line-dark dark:bg-panel-dark dark:shadow-card-dark"
+          >
+            <h2 class="mb-2 text-lg font-semibold text-ink dark:text-ink-dark">
+              Dakdekker
+            </h2>
+            <p
+              class="mb-4 text-[0.9375rem] leading-relaxed text-subtle dark:text-subtle-dark"
+            >
               Dakreparatie, nieuw dak of isolatie: vraag vrijblijvend offertes
               aan bij passende dakdekkers.
             </p>
-            <a class="card__link" href="dakdekker-bij-mij.html"
+            <a
+              class="font-semibold text-link no-underline underline-offset-2 hover:text-link-hover hover:underline focus:outline-hidden focus:ring-2 focus:ring-link/40 dark:text-link-dark dark:hover:text-link-hover-dark dark:focus:ring-link-dark/40"
+              href="dakdekker-bij-mij.html"
               >Naar dakdekker bij mij</a
             >
           </article>
-          <article class="card">
-            <h2>Slotenmaker</h2>
-            <p>
+          <article
+            class="rounded-card border border-line bg-panel p-5 shadow-card dark:border-line-dark dark:bg-panel-dark dark:shadow-card-dark"
+          >
+            <h2 class="mb-2 text-lg font-semibold text-ink dark:text-ink-dark">
+              Slotenmaker
+            </h2>
+            <p
+              class="mb-4 text-[0.9375rem] leading-relaxed text-subtle dark:text-subtle-dark"
+            >
               Cilinder, sleutelservice of spoed bij buitensluiting: zoek en
               vergelijk slotenmakers lokaal.
             </p>
-            <a class="card__link" href="slotenmaker-bij-mij.html"
+            <a
+              class="font-semibold text-link no-underline underline-offset-2 hover:text-link-hover hover:underline focus:outline-hidden focus:ring-2 focus:ring-link/40 dark:text-link-dark dark:hover:text-link-hover-dark dark:focus:ring-link-dark/40"
+              href="slotenmaker-bij-mij.html"
               >Naar slotenmaker bij mij</a
             >
           </article>
         </div>
       </section>
     </main>
-    <footer class="site-footer">
-      <div class="site-footer__inner">
-        <p>
+    <footer
+      class="mt-12 border-t border-line bg-panel dark:border-line-dark dark:bg-panel-dark"
+    >
+      <div
+        class="mx-auto max-w-4xl px-5 py-6 text-sm leading-relaxed text-subtle dark:text-subtle-dark"
+      >
+        <p class="mb-2 last:mb-0">
           © 2026 Diensten bij mij. Informatieve startpagina; de gekoppelde sites
           hebben eigen voorwaarden.
         </p>
-        <p>
+        <p class="mb-2 last:mb-0">
           Geen account nodig op deze hub — je gaat per dienst door naar het
           betreffende platform.
         </p>
