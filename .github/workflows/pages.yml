@@ -1,6 +1,8 @@
 # Builds the static site with Vite + Tailwind and deploys to GitHub Pages.
 # Repository Settings → Pages: set Source to "GitHub Actions".
 # Public URL: https://mauricedb.github.io/diensten-bij-mij/ — matches Vite `base` in vite.config.mjs.
+#
+# pnpm version: omit `version` on pnpm/action-setup so it uses `packageManager` in package.json only.
 
 name: Deploy GitHub Pages
 
@@ -22,13 +24,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 10
+      - uses: pnpm/action-setup@v5
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: '22'
           cache: pnpm
@@ -39,7 +39,7 @@ jobs:
           pnpm install --frozen-lockfile
           pnpm run build
 
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: dist
 
@@ -51,4 +51,4 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
