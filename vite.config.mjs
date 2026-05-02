@@ -29,6 +29,10 @@ export default defineConfig({
         vakman: path.join(docsDir, 'vakman-bij-mij.html'),
         dakdekker: path.join(docsDir, 'dakdekker-bij-mij.html'),
         slotenmaker: path.join(docsDir, 'slotenmaker-bij-mij.html'),
+        ongediertebestrijding: path.join(
+          docsDir,
+          'ongediertebestrijding-bij-mij.html',
+        ),
       },
     },
   },
